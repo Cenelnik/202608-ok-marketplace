@@ -10,9 +10,9 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-pluginManagement{
+pluginManagement {
     plugins {
-        val kotlinVersion : String by settings
+        val kotlinVersion: String by settings
         kotlin("jvm") version kotlinVersion
     }
 }
@@ -21,6 +21,7 @@ plugins {
     // Use the Foojay Toolchains plugin to automatically download JDKs required by subprojects.
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
-include(":m1l1-first")
 
 rootProject.name = "202608-ok-marketplace"
+
+includeBuild("homework")
